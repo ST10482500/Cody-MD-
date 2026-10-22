@@ -1,0 +1,113 @@
+/* Animated gradient background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #4d4d4d);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  padding: 40px 20px;
+  background: #111;
+  border-bottom: 2px solid silver;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: silver;
+  margin: 0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ccc;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.event-details, .gallery, footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.event-details h2 {
+  color: silver;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.gallery img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid silver;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+.rsvp-btn {
+  background: silver;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+.rsvp-btn:hover {
+  background: #999;
+  box-shadow: 0 0 25px rgba(255,255,255,0.9);
+}
+
+footer {
+  background: #111;
+  color: silver;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid silver;
+}
+
+#countdown {
+  font-size: 1.5em;
+  color: #ffccff;
+  margin-top: 20px;
+}
+.slimeto{
+  font-size: 1.7em;
+  color: #00ff66;
+  text-shadow: 0 0 10px #00ff66, 0 0 20px #00cc55, 0 0 30px #009944;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
